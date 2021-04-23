@@ -7,6 +7,17 @@
     "admin_level_names": ["ST", "DT", "TS"],
     "admin_level_local_names": ["DT_MMR4", "TS_MMR4"]
   },
+  "gridded_pop":{
+    "type": "wms", 
+    "title": "Population estimate per 100-meter square",
+    "server_layer_name": "wp_pop_cicunadj",
+    "base_url": "https://odc.ovio.org/",
+    "date_interval": "days",
+    "opacity": 0.5,
+    "legend_text": "Estimated total number of people per grid-cell (approximately 100m at the equator). The units are number of people per pixel with country totals adjusted to match the corresponding official United Nations population estimates that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat (2019 Revision of World Population Prospects). From WorldPop: https://www.worldpop.org/geodata/summary?id=49948. Worldpop Population Count Constrained individual countries UN adjusted",
+    "legend": [
+    ]
+  },
   "inform": {
     "title": "Vulnerability index",
     "type": "nso",
@@ -37,7 +48,7 @@
         "color": "#d7191c"
       }
     ],
-    "legend_text": "The INFORM model is based on risk concepts published in scientific literature and envisages three dimensions of risk: hazards & exposure, vulnerability and lack of coping capacity dimensions. See https://drmkc.jrc.ec.europa.eu/inform-index"
+    "legend_text": "In 2019, OCHA led the development of the Myanmar sub-national INFORM Risk Index working with multiple stakeholders who validated the index at a workshop in Nay Pyi Taw on 9 October 2018. The INFORM model is presented at township level. For more details on the Myanmar sub-national risk index, see: https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Myanmar. For more information on the INFORM program, see: https://drmkc.jrc.ec.europa.eu/inform-index"
   },
   "total_pop": {
     "title": "Total population",
@@ -116,13 +127,13 @@
     "admin_code": "TS_PCODE",
     "opacity": 0.7,
     "legend": [
-      { "value": "0-15", "color": "#fee5d9" },
-      { "value": "16-20", "color": "#fcbba1" },
-      { "value": "21-25", "color": "#fc9272" },
+      { "value": "0-15", "color": "#99000d" },
+      { "value": "16-20", "color": "#cb181d" },
+      { "value": "21-25", "color": "#ef3b2c" },
       { "value": "26-30", "color": "#fb6a4a" },
-      { "value": "30-35", "color": "#ef3b2c" },
-      { "value": "35-40", "color": "#cb181d" },
-      { "value": "41 or more", "color": "#99000d" }
+      { "value": "30-35", "color": "#fc9272" },
+      { "value": "35-40", "color": "#fcbba1" },
+      { "value": "41 or more", "color": "#fee5d9" }
     ],
     "legend_text": "The Multidimensional Welfare in Myanmar report uses detailed data available in the 2014 Myanmar Population and Housing Census, which covers a wide range of topics than most censuses. This includes demographic characteristics, disability and mortality, literacy and education, employment and education, housing conditions, as well as household assets and amenities."
   },
@@ -512,10 +523,10 @@
         "color": "#a50f15"
       }
     ],
-    "legend_text": "Risk indices where calculated by multiplying the vulnerability scores by the hazard score"
+    "legend_text": "Sensitivity describes the characteristics of a community adversely affected by a flood. Sensitivity scores were assigned based on a review of the literature on climate sensitivity of livelihoods and consultation with the WFP Country Office in Myanmar"
   },
   "mudra_risk_river_floods": {
-    "title": "Population risk to river floods",
+    "title": "Population at risk to river floods",
     "type": "nso",
     "path": "../data/myanmar/mudra/River_Flood_Present_conditions.json",
     "data_field": "risk_population",
@@ -563,7 +574,7 @@
     "legend_text": "Level of economic risk to cyclone winds based on historical model (MUDRA)"
   },
   "mudra_risk_cyclone_floods": {
-    "title": "Population risk to storm surges",
+    "title": "Population at risk to storm surges",
     "type": "nso",
     "path": "../data/myanmar/mudra/cyclone_flood_present.json",
     "data_field": "risk_population",
@@ -720,7 +731,7 @@
         "color": "#980043"
       }
     ],
-    "legend_text": "Sensitivity scores were assigned based on a review of the literature on climate sensitivity of livelihoods and consultation with WFP Myanmar"
+    "legend_text": "Sensitivity describes the characteristics of a community adversely affected by a drought. Sensitivity scores were assigned based on a review of the literature on climate sensitivity of livelihoods and consultation with the WFP Country Office in Myanmar"
   },
 
   "poverty": {
@@ -778,7 +789,7 @@
         "color": "#980043"
       }
     ],
-    "legend_text": "Sensitivity scores were assigned based on a review of the literature on climate sensitivity of livelihoods and consultation with WFP Myanmar"
+    "legend_text": "Sensitivity describes the characteristics of a community adversely affected by a storm. Sensitivity scores were assigned based on a review of the literature on climate sensitivity of livelihoods and consultation with the WFP Country Office in Myanmar"
   },
   "vulnerability_drought": {
     "title": "Vulnerability to drought",
@@ -810,7 +821,7 @@
         "color": "#b30000"
       }
     ],
-    "legend_text": "Hazard-specific vulnerability is calculated as adpactive capcity (an output from INFORM) multiplied by the hazard sensitivity score; the product is then divded by two"
+    "legend_text": "Vulnerability is defined as the susceptibility or sensitivity of exposures to the impact of hazards in the absence of their capacity to cope and adapt to droughts. In this analysis, vulnerability to droughts is calculated as adpactive capcity (an output from INFORM) multiplied by the hazard sensitivity score; the product is then divded by two"
   },
   "vulnerability_floods": {
     "title": "Vulnerability to floods",
@@ -842,7 +853,7 @@
         "color": "#b30000"
       }
     ],
-    "legend_text": "Hazard-specific vulnerability is calculated as adpactive capcity (an output from INFORM) multiplied by the hazard sensitivity score; the product is then divded by two"
+    "legend_text": "Vulnerability is defined as the susceptibility or sensitivity of exposures to the impact of hazards in the absence of their capacity to cope and adapt to floods. In this analysis, vulnerability to droughts is calculated as adpactive capcity (an output from INFORM) multiplied by the hazard sensitivity score; the product is then divded by two"
   },
   "vulnerability_storms": {
     "title": "Vulnerability to storms",
@@ -874,7 +885,7 @@
         "color": "#b30000"
       }
     ],
-    "legend_text": "Hazard-specific vulnerability is calculated as adpactive capcity (an output from INFORM) multiplied by the hazard sensitivity score; the product is then divded by two"
+    "legend_text": "Vulnerability is defined as the susceptibility or sensitivity of exposures to the impact of hazards in the absence of their capacity to cope and adapt to storms. In this analysis, vulnerability to droughts is calculated as adpactive capcity (an output from INFORM) multiplied by the hazard sensitivity score; the product is then divded by two"
   },
   "wfp_risk_drought": {
     "title": "Drought risk",
@@ -1012,44 +1023,44 @@
     ],
     "legend_text": "Population exposed to historical storm surges per year (MUDRA)"
   },
-  "adamts_main": {
-    "title": "Tropical storm - wind buffer",
+  "adamts_buffers": {
+    "title": "Tropical Storms - Wind buffers",
     "type": "wms",
     "server_layer_name": "wld_gdacs_tc_events_buffers",
-    "opacity": 0.5,
+    "opacity": 0.9,
     "legend": [],
-    "legend_text": "Tropical storm - wind buffer",
-    "base_url": "https://geonode.wfp.org/geoserver",
+    "legend_text": "Tropical storm wind buffers (radii) estimate the potential wind speeds along the path of a storm with a buffer estimating the area exposed to various wind speed categories. This estimate is produced by the Joint Typhoon Warning Center (JTWC) and made available through the Global Disaster Alert and Coordination System (GDACS). More information can be found at https://www.gdacs.org/",
     "group": {
-      "name": "ts",
-      "main": true
-    }
-  },
-  "adamts_nodes": {
-    "title": "Tropical storm - nodes",
-    "type": "wms",
-    "server_layer_name": "wld_gdacs_tc_events_nodes",
-    "opacity": 0.5,
-    "legend": [],
-    "legend_text": "Tropical storm - nodes",
-    "base_url": "https://geonode.wfp.org/geoserver",
-    "group": {
-      "name": "ts",
+      "name": "Tropical Storms",
       "main": false
-    }
+    },
+    "base_url": "https://geonode.wfp.org/geoserver"
+  },  
+  "adamts_nodes": {
+    "title": "Tropical Storms - Nodes",
+    "type": "wms",
+    "server_layer_name": "wld_gdacs_tc_events_nodes_mmr",
+    "opacity": 0.9,
+    "legend": [],
+    "legend_text": "Tropical storm nodes visualize the estimated maximum wind speed along the storm's path at various points in time. This estimate is produced by the Joint Typhoon Warning Center (JTWC) and made available through the Global Disaster Alert and Coordination System (GDACS). More information can be found at https://www.gdacs.org/",
+    "group": {
+      "name": "Tropical Storms",
+      "main": true
+    },
+    "base_url": "https://geonode.wfp.org/geoserver"
   },
   "adamts_tracks": {
-    "title": "Tropical storm - track",
+    "title": "Tropical Storms - Tracks",
     "type": "wms",
     "server_layer_name": "wld_gdacs_tc_events_tracks",
-    "opacity": 0.5,
+    "opacity": 0.9,
     "legend": [],
-    "legend_text": "Tropical storm - track",
-    "base_url": "https://geonode.wfp.org/geoserver",
+    "legend_text": "Tropical storm tracks visualize the projected path of a storm as shown, based on the forecasted position of the center of a storm at various points in time. This estimate is produced by the Joint Typhoon Warning Center (JTWC) and made available through the Global Disaster Alert and Coordination System (GDACS). More information can be found at https://www.gdacs.org/"    ,
     "group": {
-      "name": "ts",
+      "name": "Tropical Storms",
       "main": false
-    }
+    },
+    "base_url": "https://geonode.wfp.org/geoserver"
   },
   "forecast": {
     "title": "10-day precipitation forecast",
