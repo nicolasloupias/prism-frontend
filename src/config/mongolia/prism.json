@@ -13,10 +13,15 @@
   },
   "categories": {
     "hazards": {
+      "tropical_storms": ["adamts_buffers", "adamts_nodes","adamts_tracks"],
       "rainfall": ["rainfall_dekad", "rain_anomaly_dekad", "rain_anomaly_monthly", "rainfall_agg_month", "streak_dry_days", "days_heavy_rain", "streak_heavy_rain"],
       "vegetation_conditions": ["ndvi_dekad", "ndvi_dekad_anomaly"],
+<<<<<<< Updated upstream:src/config/prism.json
       "temperature": ["lst_daytime","lst_anomaly","lst_amplitude"],
       "tropical_storms": ["adamts_buffers", "adamts_nodes", "adamts_tracks"]
+=======
+      "temperature": ["lst_daytime","lst_anomaly","lst_amplitude"]
+>>>>>>> Stashed changes:src/config/myanmar/prism.json
     },
     "vulnerability": {
       "vulnerability_index": ["multidimensional_disadvantage_index","inform"],
